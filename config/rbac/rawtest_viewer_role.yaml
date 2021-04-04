@@ -1,0 +1,20 @@
+# permissions for end users to view rawtests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rawtest-viewer-role
+rules:
+- apiGroups:
+  - mygroup.test.com
+  resources:
+  - rawtests
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mygroup.test.com
+  resources:
+  - rawtests/status
+  verbs:
+  - get

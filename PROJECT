@@ -1,0 +1,15 @@
+domain: test.com
+layout: go.kubebuilder.io/v3
+projectName: kubetest
+repo: test
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: test.com
+  group: mygroup
+  kind: Rawtest
+  path: test/api/v1alpha1
+  version: v1alpha1
+version: "3"

@@ -1,0 +1,13 @@
+apiVersion: mygroup.test.com/v1alpha1
+kind: Rawtest
+metadata:
+  name: rawtest-sample
+spec:
+  system:
+    type: test
+    provider:
+      type: aws
+
+
+
+

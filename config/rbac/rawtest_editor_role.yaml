@@ -1,0 +1,24 @@
+# permissions for end users to edit rawtests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rawtest-editor-role
+rules:
+- apiGroups:
+  - mygroup.test.com
+  resources:
+  - rawtests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mygroup.test.com
+  resources:
+  - rawtests/status
+  verbs:
+  - get
